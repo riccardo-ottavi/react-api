@@ -14,4 +14,4 @@ export default function ActorCard(prop) {
         </div></li>
 
     )
-} 
+}  
