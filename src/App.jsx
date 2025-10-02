@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import './App.css'
 
@@ -16,15 +16,16 @@ function App() {
       .then((res) => setActors(res.data))
   }
 
+  useEffect(fetchActors, [])
+
+
   return (
-    <div>
-      <button onClick={fetchActors}>Carica Actors</button>
-      <ul>
-        {actors.map((actor) => (
-          <li key={actor.id}>{actor.name}</li>
-        ))}
-      </ul>
-    </div>
+    <ul>
+      {actors.map((actor) => (
+        <li key={actor.id}>{actor.name}</li>
+       
+      ))}
+    </ul>
   );
 }
 
