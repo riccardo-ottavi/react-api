@@ -20,12 +20,22 @@ function App() {
 
 
   return (
-    <ul>
-      {actors.map((actor) => (
-        <li key={actor.id}>{actor.name}</li>
-       
-      ))}
-    </ul>
+    <div className="actors-list">
+      <ul>
+            {actors.map((actor) => (
+              <li><div className="actor-card">
+                  <span>{actor.name}</span>
+                  <span>{actor.birth_year}</span>
+                  <span>{actor.nationality}</span>
+                  <span>{actor.biography}</span>
+                  <span>{actor.image}</span>
+                  <span>{actor.awards}</span>
+                </div></li>
+            
+            ))}
+          </ul>
+    </div>
+    
   );
 }
 

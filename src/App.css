@@ -3,3 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.actor-card {
+  width: 100%;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.actors-list{
+  width: 60%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+}
