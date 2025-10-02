@@ -1,6 +1,6 @@
 export default function ActorCard(prop) {
 
-    const {name, birth_year, nationality, biography, awards, image} = prop.actorProp;
+    const {name, birth_year, nationality, biography, awards, image, known_for} = prop.actorProp;
 
     return (
 
@@ -11,6 +11,7 @@ export default function ActorCard(prop) {
             <p><strong>Nationality</strong>: {nationality}</p>
             <p><strong>Biograophy: </strong>{biography}</p>
             <p><strong>Awards:</strong>{awards}</p>
+            <p><strong>Know for:</strong>{known_for}</p>
         </div></li>
 
     )
