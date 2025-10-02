@@ -24,12 +24,12 @@ function App() {
       <ul>
             {actors.map((actor) => (
               <li><div className="actor-card">
-                  <span>{actor.name}</span>
-                  <span>{actor.birth_year}</span>
-                  <span>{actor.nationality}</span>
-                  <span>{actor.biography}</span>
-                  <span>{actor.image}</span>
-                  <span>{actor.awards}</span>
+                  <img src={actor.image}></img>
+                  <p><strong>Name: </strong>{actor.name}</p>
+                  <p><strong>Birth:</strong> {actor.birth_year}</p>
+                  <p><strong>Nationality</strong>: {actor.nationality}</p>
+                  <p><strong>Biograophy: </strong>{actor.biography}</p>
+                  <p><strong>Awards:</strong>{actor.awards}</p>
                 </div></li>
             
             ))}
