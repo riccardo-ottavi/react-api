@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-
+import ActorCard from './ActorCard';
 
 const endPoint = "https://lanciweb.github.io/demo/api/actors/"
 
@@ -19,15 +19,10 @@ export default function ActorsList() {
         <div className="actors-list">
             <ul>
                 {actors.map((actor) => (
-                    <li><div className="actor-card">
-                        <img src={actor.image}></img>
-                        <p><strong>Name: </strong>{actor.name}</p>
-                        <p><strong>Birth:</strong> {actor.birth_year}</p>
-                        <p><strong>Nationality</strong>: {actor.nationality}</p>
-                        <p><strong>Biograophy: </strong>{actor.biography}</p>
-                        <p><strong>Awards:</strong>{actor.awards}</p>
-                    </div></li>
-
+                    <ActorCard
+                        key={actor.id}
+                        actorProp = {actor}
+                    />
                 ))}
             </ul>
         </div>
